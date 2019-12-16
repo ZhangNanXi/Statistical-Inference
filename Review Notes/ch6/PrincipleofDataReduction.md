@@ -21,5 +21,8 @@ Does not depend on the parameter $\theta$ is called an as.
 - A scale family: $\frac{X_1}{X_2},...,\frac{X_{n-1}}{X_n} $ is as.
 - as is not indep of ss. See Eg 6.2.20
 ##### An intuitive and interesting way to see completeness.
+Defition of complete: Let $f(t|\theta)$ be a family of pdfs or pmfs for a statistic $T(X)$. The family of probability  distributions is called complete if $E_{\theta}g(T)=0$ for all $\theta$ implies $P_{\theta}(g(T)=0)=1$ for all $\theta$. Equivalently, $T(X)$ is called a complete statistic.
+- Understanding. The condition of complete simply says that if one can find a function of $T$ which is an unbiased estimator of 0( which is a white noise), then this function can only take the form that it's $0$ a.e. In other words, except this extreme way of constructing functions, you cannot find a function of $T$ that is a white noise. It means that $T$ is highly informative and it's hard to find a transformation of it that is useless. Thus complete means that a statistic is a really good one.
+The following is another way to put it.
 ![](2019-12-12-17-08-09.png)
 ![](2019-12-12-17-09-15.png)
