@@ -1,7 +1,8 @@
+#### Chapter 7 Point Estimation
 ##### Point estimator definition:
 Any function of a sample is a point estimate; Any staticstic is a point estimator.
 ##### Method of Moments
-Equating the first $k$ sample moments to the corresponding $k$ population momo=ents and solving the resulting systemf of simultaneous equations.
+Equating the first $k$ sample moments to the corresponding $k$ population moments and solving the resulting system of simultaneous equations.
 - Pros: Always provide an estimator;Somestimes helpful.
 - Cons: Might occur range of estimator and range of parameter does not coincide thus draw unreasonable estimation.
 ##### Maximum Likelihood Estimators
@@ -52,3 +53,18 @@ An useful lemma to simplify computation:
 ![](2019-12-16-19-17-29.png)
 Then there is this corallay that helps us determine when this lower bound can be achieved.
 ![](2019-12-16-19-19-04.png)
+
+##### Using ss and cs to characterize bue
+Main Theorem : Let $T$ be a css for a parameter $\theta$, and let $\phi(T)$ be any estimator based only on $T$. Then $\phi(T)$ is the unique best ubbiased estimator of its expected value.
+How does this theorem conclude:
+1. (Rao-Blackwell) Let $W$ be any unbiased estimator of $\tau(\theta)$ and let $T$ be a sufficient statistic for $\theta$. Define $\phi(T)=E(W|T)$. Then $E_{\theta}\phi(T)=\tau(theta)$ and $Var_{\theta}\phi(T)\leq Var_{\theta}W$ for all $\theta$; That is $\phi(T)$ is a uniformly better unbiased estimator of $\tau(\theta)$.
+- Comment: R-B theorem implies that to find a ble, we just need to focus on the set of estimators which conditions on a ss, since conditioning on a ss will improve an estimator's performance on variance without alternating its mean.
+2. If $W$ is a bue of $\tau(\theta)$. Then $W$ is unique.
+- This result partly answers the question that if we find an estimator who achieves the CR lower bound, do we find anything problem.
+3. If $E_{\theta}W=\tau(\theta)$, $W$ is the best unbiased estimator of $\tau(\theta)$ iff $W$ is uncorrelated with all unbiased estimator of $0$.
+-Comment: An estimator with mean 0 is purely a white noise. An estimator correlated to it implies the estimator itself constains noise in it. Intuitively thinking, extracting this noise out of the estimator will decrease the variance without hurting the useful information and an ideal bue should have this property. 
+
+Now we look at the main theorem, it simply says that given a css for a param, then any unbiased estimator conditioning on it is a best unbiased estimator of some kind. So this theorem transform the difficulty of finding bue to finding a css. Notice that the complete condition guarantees that there is no noise in the stats, sufficient makes sure that all the information about the param is provided. Thus, this theorem is an elegant bridge of complete-sufficient theory and bue.
+Read Example 7.3.24.
+
+
