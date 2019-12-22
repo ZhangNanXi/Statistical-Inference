@@ -53,6 +53,7 @@ An useful lemma to simplify computation:
 ![](2019-12-16-19-17-29.png)
 Then there is this corallay that helps us determine when this lower bound can be achieved.
 ![](2019-12-16-19-19-04.png)
+
 ##### Using ss and cs to characterize bue
 Main Theorem : Let $T$ be a css for a parameter $\theta$, and let $\phi(T)$ be any estimator based only on $T$. Then $\phi(T)$ is the unique best ubbiased estimator of its expected value.
 How does this theorem conclude:
@@ -65,3 +66,5 @@ How does this theorem conclude:
 
 Now we look at the main theorem, it simply says that given a css for a param, then any unbiased estimator conditioning on it is a best unbiased estimator of some kind. So this theorem transform the difficulty of finding bue to finding a css. Notice that the complete condition guarantees that there is no noise in the stats, sufficient makes sure that all the information about the param is provided. Thus, this theorem is an elegant bridge of complete-sufficient theory and bue.
 Read Example 7.3.24.
+
+
